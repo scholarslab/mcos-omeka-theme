@@ -7,7 +7,11 @@ head(array('title' => $title, 'bodyid'=>'items','bodyclass' => 'show')); ?>
     <h1><?php echo $title; ?></h1>
     
     <div class="item-metadata">
-
+        <?php if ($description = item('Dublin Core', 'Description')): ?>
+        <div id="dublin-core-description">
+        <?php echo $description; ?>
+        </div>
+        <?php endif; ?>
         <?php if (item_belongs_to_collection()): ?>
         <div id="collection" class="element">
             <h3><?php echo __('Collection'); ?></h3>
