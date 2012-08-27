@@ -1,0 +1,5 @@
+rvm use 1.9.3@mcos
+
+bundle install
+git pull
+
