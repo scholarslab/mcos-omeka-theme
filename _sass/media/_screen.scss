@@ -1,0 +1,293 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@include establish-baseline;
+
+body {
+  border-top:1px solid rgba(255,255,255,0.5);
+  color: $default-color;
+  @include serif;
+  background-color: #fafafa;
+  
+}
+
+nav {
+  ul,
+  ol {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(30px);
+  @include adjust-leading-to(1);
+  @include trailer(0.5);
+  text-shadow: rgba(255,255,255,0.5) -1px 0;
+}
+
+h2 {
+  @include adjust-font-size-to(20px);
+  @include adjust-leading-to(1);  
+  color: $default-color-light;
+}
+
+/* Links */
+a {
+  &:link {
+    color: $link-color;
+  }
+
+  &:visited {
+    color: $link-color-light;
+  }
+
+  &:hover,
+  &:active {
+    color:$link-color-alternate;
+  }
+
+  &.button {
+    padding: 0.25em 0.5em;
+
+    &:link,
+    &:visited {
+      color:#fff;
+      background-color: $link-color; 
+    }
+
+    &:hover,
+    &:active {
+      color:#fff;
+      background-color: darken($link-color, 10%);
+    }
+  }
+}
+
+#{headings(1,3)} {
+  font-weight:700;
+  a {
+    text-decoration:none;
+  }
+}
+
+figure {
+  margin-bottom: rhythm(1);
+}
+
+figcaption {
+  font-style:italic;
+  font-size: 0.85em;
+  color: rgba(0,0,0,0.5);
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+
+  .olMap & {
+    max-width: inherit;
+  }
+}
+
+em, i {
+  font-style:italic;
+}
+
+strong, b {
+  font-weight:bold;
+}
+
+/* Utility Classes */
+.kicker {
+  @include kicker;
+}
+
+.container {
+  @include clearfix;
+}
+
+.pagination li,
+.navigation li {
+  display:inline;
+
+  &:not(:last-child):after {
+    content: " ·";
+    color: rgba(0,0,0,0.2);
+  }
+
+  a {
+    text-decoration:none;
+  }
+}
+
+.item-pagination {
+  @include clearfix;
+  border-top: 1px dotted #ccc;
+  margin-top: rhythm(1);
+  padding-top: rhythm(1);
+  li {
+    float:left;
+    width: 48%;
+    &:after {
+      display:none;
+    }
+
+    &.next {
+      text-align:right;
+      float:right;
+    }
+  }
+}
+
+/**
+ * Banner Header
+ */
+header[role=banner] {
+  padding: rhythm(1);
+  background-color: $default-color;
+  color: rgba(255,255,255,0.8);
+  text-align:center;
+
+  a {
+    color: rgba(255,255,255,0.8);
+  }
+
+  h1 {
+    margin:0;
+  }
+
+  #search {
+    margin:0 auto;
+    max-width: 200px;
+    a {
+      display:none;
+    }
+  }
+
+  nav {
+    li {
+      display:inline;
+      
+      &:not(:last-child):after {
+        content: " ··";
+        color: rgba(255,255,255,0.25);
+      }
+    }
+    
+    a {
+      text-decoration:none;
+    }
+  }
+}
+
+
+#simple-search {
+  @include adjust-font-size-to(14px);
+  position:relative;
+ 
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  input[type=text] {
+    border:1px solid rgba(0,0,0,0.1);
+    padding: 5px 2em 5px 5px;
+    margin:0;
+    @include border-radius(4px);
+    width: 100%;
+    background: rgba(255,255,255,0.25);
+    line-height: 1em;
+    &:focus {
+      border:none;
+      box-shadow:none;
+      background: #fff;
+      outline:none;
+    }
+  }
+
+  input[type=submit] {
+    border:none;
+    background-color: transparent;
+    position:absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -1em;
+    content: "";
+    text-indent: -9999px;
+    background-image:url("../images/search-icon.png");
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size: 65% 65%;
+    width: 2em;
+    height: 2em;
+    line-height:0;
+    opacity: 0.7;
+    cursor:pointer;
+
+    &:hover,
+    &:active {
+      opacity:1;
+    }
+  }
+}
+
+/**
+ * Main Content
+ */
+div[role="main"] {
+  padding: rhythm(1);
+  background-color: #fff;
+  @include clearfix;
+
+  body.show & {
+    #dublin-core-coverage {
+      margin-left: rhythm(-1);
+      margin-right: rhythm(-1);
+    }
+  }
+
+  .nlfeatures {
+    
+    .freetext {
+      display:none;
+    }
+    
+    .olMap {
+      height: 400px;
+    }
+  }
+
+}  
+
+/* Footer
+----------------------------------------------------------------------------*/
+footer[role="contentinfo"] {
+  padding: rhythm(1);
+
+  nav {
+    li {
+      display:inline;
+      
+      &:not(:last-child):after {
+        content: " ··";
+        color: rgba(0,0,0,0.25);
+      }
+    }
+    
+    a {
+      text-decoration:none;
+      color: rgba(0,0,0,0.8);
+    }
+  }
+
+}
+
+
+
