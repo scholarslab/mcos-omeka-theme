@@ -18,8 +18,8 @@ nav {
   ul,
   ol {
     list-style:none;
-    margin-left:0;
-    padding-left:0;
+    margin:0;
+    padding:0;
   }
 }
 
@@ -34,6 +34,13 @@ h2 {
   @include adjust-font-size-to(20px);
   @include adjust-leading-to(1);  
   color: $default-color-light;
+}
+
+p,
+ul,
+ol,
+dl {
+  @include rhythm(1);
 }
 
 /* Links */
@@ -245,13 +252,6 @@ div[role="main"] {
   padding: rhythm(1);
   background-color: #fff;
   @include clearfix;
-
-  body.show & {
-    #dublin-core-coverage {
-      margin-left: rhythm(-1);
-      margin-right: rhythm(-1);
-    }
-  }
 
   .nlfeatures {
     
