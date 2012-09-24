@@ -26,14 +26,22 @@ nav {
 h1 {
   @include adjust-font-size-to(30px);
   @include adjust-leading-to(1);
-  @include trailer(0.5);
   text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
 h2 {
-  @include adjust-font-size-to(20px);
-  @include adjust-leading-to(1);  
-  color: $default-color-light;
+  @include adjust-font-size-to(24px);
+  @include adjust-leading-to(1);
+  @include trailer(0.5);
+  @include leader(1);
+  color: $default-color-lighter;
+}
+
+h3 {
+  @include adjust-font-size-to(18px);
+  @include adjust-leading-to(1);
+  @include trailer(0);
+  @include leader(1);
 }
 
 p,
@@ -80,6 +88,11 @@ a {
   a {
     text-decoration:none;
   }
+
+  &+* {
+    margin-top: 0 !important;
+  }
+
 }
 
 figure {
@@ -182,7 +195,7 @@ header[role=banner] {
       display:inline;
       
       &:not(:last-child):after {
-        content: " ··";
+        content: " ::";
         color: rgba(255,255,255,0.25);
       }
     }
