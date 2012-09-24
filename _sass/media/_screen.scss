@@ -11,7 +11,7 @@ body {
   color: $default-color;
   @include serif;
   background-color: #fafafa;
-  
+
 }
 
 nav {
@@ -72,7 +72,7 @@ a {
     &:link,
     &:visited {
       color:#fff;
-      background-color: $link-color; 
+      background-color: $link-color;
     }
 
     &:hover,
@@ -193,13 +193,13 @@ header[role=banner] {
   nav {
     li {
       display:inline;
-      
+
       &:not(:last-child):after {
         content: " ::";
         color: rgba(255,255,255,0.25);
       }
     }
-    
+
     a {
       text-decoration:none;
     }
@@ -210,7 +210,7 @@ header[role=banner] {
 #simple-search {
   @include adjust-font-size-to(14px);
   position:relative;
- 
+
   * {
     margin:0;
     padding:0;
@@ -267,17 +267,17 @@ div[role="main"] {
   @include clearfix;
 
   .nlfeatures {
-    
+
     .freetext {
       display:none;
     }
-    
+
     .olMap {
       height: 400px;
     }
   }
 
-}  
+}
 
 /* Footer
 ----------------------------------------------------------------------------*/
@@ -287,13 +287,13 @@ footer[role="contentinfo"] {
   nav {
     li {
       display:inline;
-      
+
       &:not(:last-child):after {
         content: " ··";
         color: rgba(0,0,0,0.25);
       }
     }
-    
+
     a {
       text-decoration:none;
       color: rgba(0,0,0,0.8);

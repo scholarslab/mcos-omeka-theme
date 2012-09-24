@@ -6,7 +6,7 @@
 
     li {
       display:inline;
-      
+
       &:not(:first-child):before {
         color: $default-color-lighter;
         content: " · ";
@@ -64,7 +64,7 @@
   &:after {
     clear: both;
   }
-  
+
   &, .ie & {
     *zoom: 1;
   }
