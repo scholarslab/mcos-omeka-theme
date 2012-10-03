@@ -169,6 +169,7 @@ strong, b {
  * Banner Header
  */
 header[role=banner] {
+  @include sans-serif;
   padding: rhythm(1);
   background-color: $default-color;
   color: rgba(255,255,255,0.8);
@@ -303,4 +304,9 @@ footer[role="contentinfo"] {
 }
 
 
-
+/**
+ * Simple Pages
+ */
+#simple-pages-breadcrumbs {
+  display:none;
+}

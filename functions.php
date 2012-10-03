@@ -18,7 +18,7 @@ function queue_theme_assets() {
 
   __v()->headScript()->appendFile(src('selectivizr.min.js', 'javascripts'), 'text/javascript', array('conditional' => 'lt IE 9'));
 
-  __v()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Bitter:400,700,400italic', 'screen');
+  __v()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans|Bitter:400,700,400italic', 'screen');
 
   queue_css('style');
 }

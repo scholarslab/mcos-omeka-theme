@@ -51,8 +51,8 @@ div[role="main"] {
 }
 
 #primary {
-  @include span-columns(6 omega, 12);
-  padding: rhythm(0.5) 0;
+  @include span-columns(6, 12);
+  padding: rhythm(1);
 
   .browse & {
     @include span-columns(12,12);
@@ -60,7 +60,7 @@ div[role="main"] {
 }
 
 #secondary{
-  @include span-columns(6, 12);
+  @include span-columns(6 omega, 12);
 
   #dublin-core-coverage {
     height: 100%;
