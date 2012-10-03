@@ -10,8 +10,7 @@ body {
   border-top:1px solid rgba(255,255,255,0.5);
   color: $default-color;
   @include serif;
-  background-color: #fafafa;
-
+  background-color: #f0f0f0;
 }
 
 nav {
@@ -192,6 +191,10 @@ header[role=banner] {
   }
 
   nav {
+    ul {
+      @include adjust-font-size-to(14px);
+    }
+
     li {
       display:inline;
 
@@ -223,10 +226,10 @@ header[role=banner] {
     margin:0;
     @include border-radius(4px);
     width: 100%;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.925);
     line-height: 1em;
+
     &:focus {
-      border:none;
       box-shadow:none;
       background: #fff;
       outline:none;
@@ -275,6 +278,18 @@ div[role="main"] {
 
     .olMap {
       height: 400px;
+    }
+  }
+
+  #home & {
+    background-image:url("../images/greece.png");
+    background-size:cover;
+
+    #primary {
+      float:right !important;
+      background: rgba(255,255,255,0.75);
+      padding: rhythm(1);
+      margin: rhythm(1);
     }
   }
 

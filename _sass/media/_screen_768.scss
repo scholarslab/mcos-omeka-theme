@@ -37,15 +37,23 @@ header[role="banner"] {
 div[role="main"] {
   padding:0;
 
-  .browse & {
-    padding: 0 rhythm(1);
+  @include clearfix;
 
+  .browse & {
     .dublin-core-coverage {
       width: 50%;
+      float:right;
+    }
+
+    .item-metadata {
+      margin-left: rhythm(1);
     }
 
     .item {
-      margin-bottom: rhythm(2);
+      padding-bottom: rhythm(1);
+      border-bottom: 1px dotted $default-color-lightest;
+
+      @include clearfix;
     }
   }
 }
