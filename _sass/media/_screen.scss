@@ -283,7 +283,7 @@ div[role="main"] {
 
   #home & {
     background-image:url("../images/greece.png");
-    background-size:cover;
+    @include background-size(cover);
 
     #primary {
       float:right !important;
