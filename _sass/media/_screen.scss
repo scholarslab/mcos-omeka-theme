@@ -186,11 +186,11 @@ header[role=banner] {
   }
 
   h1 {
-    margin:0;
+    margin:0 0 0.5em;
   }
 
   #search {
-    margin:0 auto;
+    margin:0 auto 1em;
     max-width: 200px;
     a {
       display:none;
@@ -310,6 +310,7 @@ div[role="main"] {
 ----------------------------------------------------------------------------*/
 footer[role="contentinfo"] {
   padding: rhythm(1);
+  text-align:center;
 
   nav {
     li {
@@ -327,6 +328,10 @@ footer[role="contentinfo"] {
     }
   }
 
+  p {
+    @include adjust-font-size-to(12px);
+    color: $default-color-lighter;
+  }
 }
 
 

@@ -78,4 +78,14 @@ div[role="main"] {
 
 footer[role="contentinfo"] {
   clear:both;
+  text-align:left;
+
+  nav {
+    @include span-columns(6, 12);
+  }
+
+  .credits {
+    margin:0;
+    @include span-columns(6 omega, 12);
+  }
 }
