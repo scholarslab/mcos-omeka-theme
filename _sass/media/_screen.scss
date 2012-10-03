@@ -10,30 +10,44 @@ body {
   border-top:1px solid rgba(255,255,255,0.5);
   color: $default-color;
   @include serif;
-  background-color: #fafafa;
-  
+  background-color: #f0f0f0;
 }
 
 nav {
   ul,
   ol {
     list-style:none;
-    margin-left:0;
-    padding-left:0;
+    margin:0;
+    padding:0;
   }
 }
 
 h1 {
   @include adjust-font-size-to(30px);
   @include adjust-leading-to(1);
-  @include trailer(0.5);
   text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
 h2 {
-  @include adjust-font-size-to(20px);
-  @include adjust-leading-to(1);  
-  color: $default-color-light;
+  @include adjust-font-size-to(24px);
+  @include adjust-leading-to(1);
+  @include trailer(0.5);
+  @include leader(1);
+  color: $default-color-lighter;
+}
+
+h3 {
+  @include adjust-font-size-to(18px);
+  @include adjust-leading-to(1);
+  @include trailer(0);
+  @include leader(1);
+}
+
+p,
+ul,
+ol,
+dl {
+  @include rhythm(1);
 }
 
 /* Links */
@@ -57,7 +71,7 @@ a {
     &:link,
     &:visited {
       color:#fff;
-      background-color: $link-color; 
+      background-color: $link-color;
     }
 
     &:hover,
@@ -73,6 +87,11 @@ a {
   a {
     text-decoration:none;
   }
+
+  &+* {
+    margin-top: 0 !important;
+  }
+
 }
 
 figure {
@@ -149,6 +168,7 @@ strong, b {
  * Banner Header
  */
 header[role=banner] {
+  @include sans-serif;
   padding: rhythm(1);
   background-color: $default-color;
   color: rgba(255,255,255,0.8);
@@ -171,15 +191,19 @@ header[role=banner] {
   }
 
   nav {
+    ul {
+      @include adjust-font-size-to(14px);
+    }
+
     li {
       display:inline;
-      
+
       &:not(:last-child):after {
-        content: " ··";
+        content: " ::";
         color: rgba(255,255,255,0.25);
       }
     }
-    
+
     a {
       text-decoration:none;
     }
@@ -190,7 +214,7 @@ header[role=banner] {
 #simple-search {
   @include adjust-font-size-to(14px);
   position:relative;
- 
+
   * {
     margin:0;
     padding:0;
@@ -202,10 +226,10 @@ header[role=banner] {
     margin:0;
     @include border-radius(4px);
     width: 100%;
-    background: rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.925);
     line-height: 1em;
+
     &:focus {
-      border:none;
       box-shadow:none;
       background: #fff;
       outline:none;
@@ -246,25 +270,30 @@ div[role="main"] {
   background-color: #fff;
   @include clearfix;
 
-  body.show & {
-    #dublin-core-coverage {
-      margin-left: rhythm(-1);
-      margin-right: rhythm(-1);
-    }
-  }
-
   .nlfeatures {
-    
+
     .freetext {
       display:none;
     }
-    
+
     .olMap {
       height: 400px;
     }
   }
 
-}  
+  #home & {
+    background-image:url("../images/greece.png");
+    background-size:cover;
+
+    #primary {
+      float:right !important;
+      background: rgba(255,255,255,0.75);
+      padding: rhythm(1);
+      margin: rhythm(1);
+    }
+  }
+
+}
 
 /* Footer
 ----------------------------------------------------------------------------*/
@@ -274,13 +303,13 @@ footer[role="contentinfo"] {
   nav {
     li {
       display:inline;
-      
+
       &:not(:last-child):after {
         content: " ··";
         color: rgba(0,0,0,0.25);
       }
     }
-    
+
     a {
       text-decoration:none;
       color: rgba(0,0,0,0.8);
@@ -290,4 +319,9 @@ footer[role="contentinfo"] {
 }
 
 
-
+/**
+ * Simple Pages
+ */
+#simple-pages-breadcrumbs {
+  display:none;
+}

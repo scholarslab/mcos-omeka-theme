@@ -6,7 +6,7 @@
 
     li {
       display:inline;
-      
+
       &:not(:first-child):before {
         color: $default-color-lighter;
         content: " · ";
@@ -44,7 +44,7 @@
 }
 
 @mixin sans-serif {
-  font-family: Verdana, sans-serif;
+  font-family: "Open Sans", Verdana, sans-serif;
   font-weight:normal;
   font-style:normal;
 }
@@ -64,7 +64,7 @@
   &:after {
     clear: both;
   }
-  
+
   &, .ie & {
     *zoom: 1;
   }

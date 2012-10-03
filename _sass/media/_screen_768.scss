@@ -37,22 +37,30 @@ header[role="banner"] {
 div[role="main"] {
   padding:0;
 
+  @include clearfix;
+
   .browse & {
-    padding: 0 rhythm(1);
-    
     .dublin-core-coverage {
       width: 50%;
+      float:right;
+    }
+
+    .item-metadata {
+      margin-left: rhythm(1);
     }
 
     .item {
-      margin-bottom: rhythm(2);
+      padding-bottom: rhythm(1);
+      border-bottom: 1px dotted $default-color-lightest;
+
+      @include clearfix;
     }
-  } 
+  }
 }
 
 #primary {
-  @include span-columns(6 omega, 12);
-  padding: rhythm(0.5) 0;
+  @include span-columns(6, 12);
+  padding: rhythm(1);
 
   .browse & {
     @include span-columns(12,12);
@@ -60,7 +68,7 @@ div[role="main"] {
 }
 
 #secondary{
-  @include span-columns(6, 12);
+  @include span-columns(6 omega, 12);
 
   #dublin-core-coverage {
     height: 100%;

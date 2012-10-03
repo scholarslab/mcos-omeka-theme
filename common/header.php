@@ -20,7 +20,9 @@
 
     <?php plugin_header(); ?>
 
-    <?php load_theme_assets(); ?>
+    <?php queue_theme_assets(); ?>
+    <?php display_js(); ?>
+    <?php display_css(); ?>
 
 </head>
 
