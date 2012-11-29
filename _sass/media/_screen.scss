@@ -6,11 +6,16 @@
 
 @include establish-baseline;
 
+html {
+  background-color: #fafafa;
+}
+
 body {
+  @include container;
   border-top:1px solid rgba(255,255,255,0.5);
   color: $default-color;
   @include serif;
-  background-color: #f0f0f0;
+  background-color: #fafafa;
 }
 
 nav {
@@ -169,8 +174,8 @@ strong, b {
  */
 header[role=banner] {
   @include sans-serif;
-  padding: rhythm(1);
-  background-color: $default-color;
+  @include pad(1,1);
+  background-color: lighten($default-color, 10%);
   color: rgba(255,255,255,0.8);
   text-align:center;
 
@@ -273,9 +278,16 @@ header[role=banner] {
  * Main Content
  */
 div[role="main"] {
-  padding: rhythm(1);
-  background-color: #fff;
-  @include clearfix;
+  @include pad(1,1);
+
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
+
+  .neatline-container {
+    @include pull(1,10);
+    @include pull(1,10, right);
+    height: 450px !important;
+  }
 
   .nlfeatures {
 
@@ -284,7 +296,7 @@ div[role="main"] {
     }
 
     .olMap {
-      height: 400px;
+      height: 300px;
     }
   }
 
@@ -293,11 +305,8 @@ div[role="main"] {
     @include background-size(cover);
 
     #primary {
-      float:right !important;
+      padding: rhythm(1) gutter(7);
       background: rgba(255,255,255,0.75);
-      padding: rhythm(1);
-      margin: rhythm(1);
-
       h1 {
         display:none !important;
       }
@@ -309,7 +318,10 @@ div[role="main"] {
 /* Footer
 ----------------------------------------------------------------------------*/
 footer[role="contentinfo"] {
-  padding: rhythm(1);
+  @include pad(1,1);
+  @include clearfix;
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
   text-align:center;
 
   nav {
@@ -338,6 +350,7 @@ footer[role="contentinfo"] {
 /**
  * Simple Pages
  */
-#simple-pages-breadcrumbs {
+#simple-pages-breadcrumbs,
+.simple-pages-navigation {
   display:none;
 }

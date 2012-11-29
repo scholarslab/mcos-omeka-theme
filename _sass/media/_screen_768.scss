@@ -1,16 +1,15 @@
-$total-columns  : 4;             // a 12-column grid
-$column-width   : 20%;            // each column is 4em wide
-$gutter-width   : 10%;            // 1em gutters between columns
-$grid-padding   : 0;  // grid-padding equal to gutters
-
 body {
-  @include container;
 }
 
 header[role="banner"] {
   text-align:left;
   @include clearfix;
-  padding: rhythm(0.5) rhythm(1);
+
+  * {
+    margin:0;
+  }
+  padding-top: rhythm(0.5);
+  padding-bottom: rhythm(0.5);
 
   h1 {
     @include span-columns(6, 12);
@@ -35,7 +34,6 @@ header[role="banner"] {
 }
 
 div[role="main"] {
-  padding:0;
 
   @include clearfix;
 
@@ -59,20 +57,31 @@ div[role="main"] {
 }
 
 #primary {
-  @include span-columns(6, 12);
-  padding: rhythm(1);
-
-  .browse & {
-    @include span-columns(12,12);
+  #home &,
+  .simple-page & {
+    @include span-columns(7 omega, 10);
   }
 }
 
 #secondary{
-  @include span-columns(6 omega, 12);
+  @include span-columns(5 omega, 10);
 
   #dublin-core-coverage {
     height: 100%;
     max-height: 100%;
+  }
+}
+
+#neatline-header {
+  @include clearfix;
+  margin-bottom: rhythm(1);
+
+  h1, a {
+    display:inline;
+  }
+  
+  .exhibit-fullscreen {
+    display:none;
   }
 }
 
