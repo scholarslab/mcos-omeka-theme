@@ -37,17 +37,13 @@
     <h1 id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></h1>
 
     <div id="primary-nav">
-      <div id="search">
-      <?php echo simple_search(); ?>
-      <?php echo link_to_advanced_search(); ?>
-      </div>
-
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(array(__('Home') => uri(''), __('Browse Items') => uri('items'))); ?>
+            <?php echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
         </ul>
       </nav>
     </div>
+
   </header>
 
   <div role="main">
