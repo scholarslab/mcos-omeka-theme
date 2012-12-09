@@ -23,3 +23,8 @@ function queue_theme_assets() {
   queue_css('style');
 }
 
+function get_neatline_by_id($id) {
+
+    return get_db()->getTable('NeatlineExhibit')->find($id);
+
+}
