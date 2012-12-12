@@ -1,7 +1,7 @@
 require 'susy' #Susy framework
 
 http_path = "/"
-css_dir = "css"
+css_dir = "/"
 sass_dir = "_sass"
 images_dir = "images"
 javascripts_dir = "javascripts"

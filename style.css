@@ -1,0 +1,65 @@
+/*
+Syntax error: File to import not found or unreadable: media/screen.
+              Load paths:
+                /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css
+                /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/frameworks/blueprint/stylesheets
+                /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets
+                /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-susy-plugin-0.9/sass
+                Compass::SpriteImporter
+        on line 5 of /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css/style.scss
+
+1: /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css/style.scss
+
+Backtrace:
+/Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css/style.scss:5
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/import_node.rb:64:in `rescue in import'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/import_node.rb:42:in `import'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/import_node.rb:25:in `imported_file'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:85:in `rescue in invalid_import_parent?'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:79:in `invalid_import_parent?'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:143:in `try_send'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:12:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:28:in `visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:39:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:28:in `visit_children'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:35:in `visit_root'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:24:in `visit'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/tree/root_node.rb:19:in `render'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:126:in `timed'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:139:in `block in compile'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/logger.rb:45:in `red'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:138:in `compile'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:101:in `each'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:101:in `block in run'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:126:in `timed'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/compiler.rb:100:in `run'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/commands/update_project.rb:45:in `perform'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/commands/base.rb:18:in `execute'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/bin/compass:29:in `block in <top (required)>'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/bin/compass:43:in `call'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/bin/compass:43:in `<top (required)>'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/bin/compass:19:in `load'
+/Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: media/screen.\A               Load paths:\A                 /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css\A                 /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/frameworks/blueprint/stylesheets\A                 /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets\A                 /Users/davidmcclure/.rvm/gems/ruby-1.9.3-p0/gems/compass-susy-plugin-0.9/sass\A                 Compass::SpriteImporter\A         on line 5 of /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css/style.scss\A \A 1: /Applications/MAMP/htdocs/mcos/themes/mcos-omeka-theme/_sass/css/style.scss"; }
