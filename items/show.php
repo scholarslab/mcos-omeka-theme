@@ -12,6 +12,9 @@ head(array('title' => $title, 'bodyid'=>'items','bodyclass' => 'show')); ?>
         <?php echo $description; ?>
         </div>
         <?php endif; ?>
+
+        <?php echo display_files_for_item(); ?>
+
         <?php if (item_belongs_to_collection()): ?>
         <div id="collection" class="element">
             <h3><?php echo __('Collection'); ?></h3>
