@@ -300,16 +300,15 @@ div[role="main"] {
     }
   }
 
-  .simple-page & {
+  .simple-page &,
+  .neatline-browse &
+  {
     background-image:url("../images/greece.png");
     @include background-size(cover);
 
     #primary {
       padding: rhythm(1) gutter(7);
       background: rgba(255,255,255,0.75);
-      h1 {
-        display:none !important;
-      }
     }
   }
 

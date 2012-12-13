@@ -1,6 +1,6 @@
 <?php
 $title = __('Neatline | Browse Exhibits');
-head(array('content_class' => 'neatline', 'title' => $title));
+head(array('content_class' => 'neatline', 'bodyclass' => 'neatline neatline-browse browse', 'title' => $title));
 ?>
 <div id="primary">
 <?php echo flash(); ?>

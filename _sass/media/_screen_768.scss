@@ -57,10 +57,14 @@ div[role="main"] {
 }
 
 #primary {
+  @include span-columns(5, 10);
+
   #home &,
-  .simple-page & {
+  .simple-page &,
+  .neatline-browse & {
     @include span-columns(7 omega, 10);
   }
+
 }
 
 #secondary{
