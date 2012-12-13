@@ -5,5 +5,4 @@ if ! command -v bundle ; then
 fi
 
 bundle install
-git pull
 
