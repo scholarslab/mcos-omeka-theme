@@ -102,3 +102,11 @@ footer[role="contentinfo"] {
     @include span-columns(6 omega, 12);
   }
 }
+
+.simple-page-home {
+  #primary {
+    h1 {
+      display:none !important;
+    }
+  }
+}
