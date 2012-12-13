@@ -6,11 +6,14 @@
   width: 100%;
 
   .neatline-text-container {
+    padding-top: 1em;
     white-space: pre;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 38px;
-    width: 45%;
+    width: 48%;
+    height: 100%;
     float: left;
+    overflow-y: scroll;
 
     .line-number {
       font-family: Palatino;
@@ -91,16 +94,15 @@
 
       }
 
-      &.turquoise {
-        background: #B8EFF7;
+      &.pink {
+        background: #FFCFE4;
 
         &.highlighted {
-          background: #9BE8F3;
+          background: #FFBAD8;
         }
 
         &.selected {
-          background: #00C7E4;
-          color: black;
+          background: #F54F9A;
         }
 
       }
@@ -141,7 +143,7 @@
     position: relative;
     float: right;
     height: 100% !important;
-    width: 50%;
+    width: 52%;
   }
 
 }
