@@ -175,6 +175,8 @@ strong, b {
 header[role=banner] {
   @include sans-serif;
   @include pad(1,1);
+  padding-top:rhythm(0.5);
+  padding-bottom: rhythm(0.5);
   background-color: lighten($default-color, 10%);
   color: rgba(255,255,255,0.8);
   text-align:center;
@@ -191,7 +193,7 @@ header[role=banner] {
   }
 
   h1 {
-    margin:0 0 0.5em;
+    margin:0;
   }
 
   #search {
@@ -204,7 +206,7 @@ header[role=banner] {
 
   nav {
     ul {
-      @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(16px);
     }
 
     li {
