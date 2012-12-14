@@ -355,3 +355,11 @@ footer[role="contentinfo"] {
 .simple-pages-navigation {
   display:none;
 }
+
+.simple-page-home {
+  #primary {
+    h1 {
+      display:none !important;
+    }
+  }
+}
