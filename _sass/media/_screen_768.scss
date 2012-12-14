@@ -9,13 +9,12 @@ header[role="banner"] {
     margin:0;
   }
   padding-top: rhythm(0.5);
-  padding-bottom: rhythm(0.2);
+  padding-bottom: rhythm(0.5);
 
   h1 {
     @include span-columns(6, 12);
-    @include adjust-font-size-to(26px);
+    @include adjust-font-size-to(16px);
     font-weight: normal;
-    line-height: 1em;
   }
 
   #primary-nav {
@@ -64,10 +63,6 @@ div[role="main"] {
   .simple-page &,
   .neatline-browse & {
     @include span-columns(7 omega, 10);
-  }
-
-  blockquote {
-    color: black !important;
   }
 
 }
