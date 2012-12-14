@@ -11,7 +11,7 @@ head(array('content_class' => 'neatline', 'bodyclass' => 'neatline neatline-brow
 Specify the order of Neatlines listing by the following IDs:
 */
 
-$ids = array(8,5,12,6,7,9,10,11);
+$ids = array(8,12,5,6,7,9,10,11);
 $neatlines = array();
 foreach ($ids as $id) {
     $neatlines[] = get_neatline_by_id($id);
