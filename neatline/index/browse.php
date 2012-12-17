@@ -25,4 +25,7 @@ set_neatlines_for_loop($neatlines);
 </div>
 <?php endwhile; ?>
 
+<?php endif; ?>
+</div>
+
 <?php foot(); ?>
