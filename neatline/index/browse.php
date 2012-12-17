@@ -25,9 +25,4 @@ set_neatlines_for_loop($neatlines);
 </div>
 <?php endwhile; ?>
 
-<!-- Pagination. -->
-<div class="pagination"><?php echo pagination_links(); ?></div>
-<?php endif; ?>
-</div>
-
 <?php foot(); ?>
