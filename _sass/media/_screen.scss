@@ -311,7 +311,24 @@ div[role="main"] {
     #primary {
       padding: rhythm(1) gutter(7);
       background: rgba(255,255,255,0.75);
+
+      blockquote {
+        margin-left: 2em;
+        font-size: 20px;
+        color: #1d1d1d;
+      }
+
+      a.banner {
+        @include sans-serif;
+        font-size: 1.8em;
+        padding: 10px;
+        border-radius: 3px;
+        color: #284242;
+        margin-left: 1em;
+      }
+
     }
+
   }
 
 }
@@ -338,7 +355,9 @@ footer[role="contentinfo"] {
     a {
       text-decoration:none;
       color: rgba(0,0,0,0.8);
+
     }
+
   }
 
   p {
