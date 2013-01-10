@@ -65,6 +65,10 @@ div[role="main"] {
     @include span-columns(7 omega, 10);
   }
 
+  .simple-page & {
+    float: left;
+  }
+
 }
 
 #secondary{
