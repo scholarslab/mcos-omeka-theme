@@ -37,6 +37,12 @@ div[role="main"] {
 
   @include clearfix;
 
+  #home & {
+    #hajj {
+      @include span-columns(4 omega, 8);
+    }
+
+  }
   .browse & {
     .dublin-core-coverage {
       width: 50%;

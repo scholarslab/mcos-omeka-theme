@@ -48,7 +48,9 @@
 
   <div role="main">
 <?php if ($bodyid == 'home'): ?>
-<img src="<?php echo img('hajj2.jpg'); ?>" id="hajj">
+<figure id="hajj">
+<img src="<?php echo img('hajj2.jpg'); ?>">
+</figure>
 <?php endif; ?>
 
     <?php plugin_page_content(); ?>
