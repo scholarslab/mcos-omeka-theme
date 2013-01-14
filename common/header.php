@@ -47,7 +47,7 @@
   </header>
 
 <?php if ($bodyid == 'home'): ?>
-<img src="<?php echo img('hajj.jpg'); ?>" id="hajj">
+<img src="<?php echo img('hajj2.jpg'); ?>" id="hajj">
 <?php endif; ?>
 
   <div role="main">
