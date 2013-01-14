@@ -46,7 +46,10 @@
 
   </header>
 
-  <div role="main">
+<?php if ($bodyid == 'home'): ?>
+<img src="<?php echo img('hajj.jpg'); ?>" id="hajj">
+<?php endif; ?>
 
+  <div role="main">
     <?php plugin_page_content(); ?>
 

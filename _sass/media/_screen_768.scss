@@ -56,21 +56,6 @@ div[role="main"] {
   }
 }
 
-#primary {
-  @include span-columns(5, 10);
-
-  #home &,
-  .simple-page &,
-  .neatline-browse & {
-    @include span-columns(7 omega, 10);
-  }
-
-  .simple-page & {
-    float: left;
-  }
-
-}
-
 #secondary{
   @include span-columns(5 omega, 10);
 
@@ -105,5 +90,6 @@ footer[role="contentinfo"] {
     margin:0;
     @include span-columns(6 omega, 12);
   }
+
 }
 
