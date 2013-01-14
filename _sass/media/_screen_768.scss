@@ -40,6 +40,7 @@ div[role="main"] {
   #home & {
     #hajj {
       @include span-columns(4 omega, 8);
+      @include push(1);
     }
 
   }
