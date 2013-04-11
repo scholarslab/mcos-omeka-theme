@@ -7,7 +7,6 @@
 @include establish-baseline;
 
 html {
-  background-color: #fafafa;
 }
 
 body {
@@ -15,7 +14,6 @@ body {
   border-top:1px solid rgba(255,255,255,0.5);
   color: $default-color;
   @include serif;
-  background-color: #fafafa;
 }
 
 nav {
@@ -281,7 +279,6 @@ header[role=banner] {
  */
 div[role="main"] {
   @include pad(1,1);
-
   padding-top: rhythm(1);
   padding-bottom: rhythm(1);
 
@@ -305,8 +302,6 @@ div[role="main"] {
   .simple-page &,
   .neatline-browse &
   {
-    background-image:url("../images/hajj.jpg");
-    @include background-size(cover);
 
     #primary {
       padding: rhythm(1) gutter(7);
@@ -341,6 +336,7 @@ footer[role="contentinfo"] {
   padding-top: rhythm(1);
   padding-bottom: rhythm(1);
   text-align:center;
+  border-top: 1px dotted #ccc;
 
   nav {
     li {

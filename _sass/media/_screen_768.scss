@@ -37,6 +37,13 @@ div[role="main"] {
 
   @include clearfix;
 
+  #home & {
+    #hajj {
+      @include span-columns(4 omega, 8);
+      @include push(1);
+    }
+
+  }
   .browse & {
     .dublin-core-coverage {
       width: 50%;
@@ -54,21 +61,6 @@ div[role="main"] {
       @include clearfix;
     }
   }
-}
-
-#primary {
-  @include span-columns(5, 10);
-
-  #home &,
-  .simple-page &,
-  .neatline-browse & {
-    @include span-columns(7 omega, 10);
-  }
-
-  .simple-page & {
-    float: left;
-  }
-
 }
 
 #secondary{
@@ -105,5 +97,6 @@ footer[role="contentinfo"] {
     margin:0;
     @include span-columns(6 omega, 12);
   }
+
 }
 
