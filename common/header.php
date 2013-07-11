@@ -9,7 +9,7 @@
 
     <meta charset="utf-8">
 
-    <title><?php echo settings('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
+    <title><?php echo option('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
 
     <meta name="description" content="">
 
