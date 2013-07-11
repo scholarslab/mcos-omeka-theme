@@ -19,26 +19,25 @@
     <?php echo auto_discovery_link_tags(); ?>
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
-    <?php queue_theme_assets(); ?>
-    <?php head_css(); ?>
-    <?php head_js(); ?>
+    <?php echo queue_theme_assets(); ?>
+    <?php echo head_css(); ?>
+    <?php echo head_js(); ?>
 
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-
-<?php plugin_body(); ?>
+  <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
   <header role="banner">
 
-    <?php plugin_page_header(); ?>
+    <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 
-    <h1 id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></h1>
+    <h1 id="site-title"><?php // echo link_to_home_page(custom_display_logo()); ?></h1>
 
     <div id="primary-nav">
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
+            <?php echo public_nav_main(array(__('Browse Exhibits') => url('neatline-exhibits'))); ?>
         </ul>
       </nav>
     </div>
@@ -47,5 +46,4 @@
 
   <div role="main">
 
-    <?php plugin_page_content(); ?>
-
+    <?php fire_plugin_hook('page_content', array('view' => $this)); ?>

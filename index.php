@@ -1,3 +1,2 @@
-<?php head(); ?>
-
-<?php foot(); ?>
+<?php echo head(); ?>
+<?php echo foot(); ?>

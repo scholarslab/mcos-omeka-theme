@@ -10,17 +10,18 @@
  * - Theme style sheet.
  */
 function queue_theme_assets() {
-  queue_js('modernizr.min');
+
+  queue_js_file('modernizr.min');
 
   $respondSrc = src('respond.min.js', 'javascripts');
   $modernizrLoad = "Modernizr.load([{test: Modernizr.mq(), nope: " . "['$respondSrc']}]);";
   queue_js_string($modernizrLoad);
 
-  __v()->headScript()->appendFile(src('selectivizr.min.js', 'javascripts'), 'text/javascript', array('conditional' => 'lt IE 9'));
+  get_view()->headScript()->appendFile(src('selectivizr.min.js', 'javascripts'), 'text/javascript', array('conditional' => 'lt IE 9'));
+  get_view()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans|Bitter:400,700,400italic', 'screen');
 
-  __v()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans|Bitter:400,700,400italic', 'screen');
+  queue_css_file('style');
 
-  queue_css('style');
 }
 
 function get_neatline_by_id($id) {
