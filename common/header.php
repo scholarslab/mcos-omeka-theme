@@ -17,12 +17,11 @@
     <meta name="viewport" content="width=device-width">
 
     <?php echo auto_discovery_link_tags(); ?>
-
-    <?php plugin_header(); ?>
+    <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
     <?php queue_theme_assets(); ?>
-    <?php display_js(); ?>
-    <?php display_css(); ?>
+    <?php head_css(); ?>
+    <?php head_js(); ?>
 
 </head>
 
