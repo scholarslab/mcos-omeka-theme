@@ -318,19 +318,35 @@ div[role="main"] {
         color: #1d1d1d;
       }
 
-      a.banner {
-        @include sans-serif;
-        font-size: 1.8em;
-        padding: 10px;
-        border-radius: 3px;
-        color: #284242;
-        margin-left: 1em;
-      }
-
     }
 
   }
 
+}
+
+#interactive-text {
+    @include adjust-font-size-to(18px);
+    text-align:center;
+    @include sans-serif;
+
+    a {
+        text-decoration:none;
+        padding: 10px;
+        @include border-radius(5px);
+        &:link,
+        &:visited {
+            background-color: $link-color;
+            color: #fff;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $link-color-alternate;
+            color: #fff;
+        }
+
+    }
 }
 
 /* Footer
