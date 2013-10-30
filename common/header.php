@@ -39,7 +39,7 @@
     <div id="primary-nav">
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
+            <?php echo public_nav_main(); ?>
         </ul>
       </nav>
     </div>
