@@ -343,7 +343,7 @@ div[role="main"] {
         &:hover,
         &:focus,
         &:active {
-            background-color: $link-color-light;
+            background-color: darken($link-color, 10%);
             color: #fff;
         }
 
