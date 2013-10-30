@@ -39,7 +39,7 @@
     <div id="primary-nav">
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(); ?>
+            <?php echo public_nav_main(array()); ?>
         </ul>
       </nav>
     </div>
