@@ -325,13 +325,14 @@ div[role="main"] {
 }
 
 #interactive-text {
-    @include adjust-font-size-to(18px);
+    @include adjust-font-size-to(24px);
     text-align:center;
     @include sans-serif;
+    @include margin-trailer(1, 24px);
 
     a {
         text-decoration:none;
-        padding: 10px;
+        padding: 24px;
         @include border-radius(5px);
         &:link,
         &:visited {
@@ -342,7 +343,7 @@ div[role="main"] {
         &:hover,
         &:focus,
         &:active {
-            background-color: $link-color-alternate;
+            background-color: $link-color-light;
             color: #fff;
         }
 
