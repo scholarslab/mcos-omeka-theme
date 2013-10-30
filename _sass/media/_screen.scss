@@ -328,7 +328,7 @@ div[role="main"] {
     @include adjust-font-size-to(24px);
     text-align:center;
     @include sans-serif;
-    @include margin-trailer(1, 24px);
+    margin: rhythm(2,24px) 0;
 
     a {
         text-decoration:none;
