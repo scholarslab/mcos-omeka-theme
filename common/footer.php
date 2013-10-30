@@ -7,7 +7,7 @@
       </ul>
     </nav>
 
-    <p class="credits"><em>Catalogue of Ships</em> is a project of the <a href="http://scholarslab.org">Scholars' Lab</a> at the <a href="http://library.virginia.edu">University of Virginia Library</a>.</p>
+    <p class="credits"><em>Catalogue of Ships</em> is designed and maintained by the <a href="http://scholarslab.org">Scholars’ Lab</a> at the <a href="http://library.virginia.edu">University of Virginia Library</a>.</p>
     <?php plugin_footer(); ?>
 
   </footer>
