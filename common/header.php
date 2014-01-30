@@ -29,15 +29,15 @@
 <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
   <header role="banner">
+    <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
-    <?php plugin_page_header(); ?>
-
-    <h1 id="site-title"><?php echo link_to_home_page(custom_display_logo()); ?></h1>
+    <h1 id="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
 
     <div id="primary-nav">
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
+            <?php echo public_nav_main(); ?>
+            <?php //echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
         </ul>
       </nav>
     </div>
@@ -51,5 +51,4 @@
 </figure>
 <?php endif; ?>
 
-    <?php plugin_page_content(); ?>
-
+ <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
