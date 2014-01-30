@@ -25,15 +25,15 @@ function queue_theme_assets() {
 
 function get_neatline_by_id($id) {
 
-    return get_db()->getTable('NeatlineExhibit')->find($id);
+  return get_db()->getTable('NeatlineExhibit')->find($id);
 
 }
 
 function mcos_item_relations($item = null) {
 
-    $item = $item ? $item : get_current_item();
-    $subjectRelations = ItemRelationsPlugin::prepareSubjectRelations($item);
-    $objectRelations = ItemRelationsPlugin::prepareObjectRelations($item);
-    return __v()->partial('common/_item_relations.php', array('subjectRelations' => $subjectRelations, 'objectRelations' => $objectRelations) );
+  $item = $item ? $item : get_current_item();
+  $subjectRelations = ItemRelationsPlugin::prepareSubjectRelations($item);
+  $objectRelations = ItemRelationsPlugin::prepareObjectRelations($item);
+  return __v()->partial('common/_item_relations.php', array('subjectRelations' => $subjectRelations, 'objectRelations' => $objectRelations) );
 
 }
