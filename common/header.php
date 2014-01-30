@@ -17,27 +17,24 @@
     <meta name="viewport" content="width=device-width">
 
     <?php echo auto_discovery_link_tags(); ?>
-
-    <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
-
+    <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
+    <?php echo queue_theme_assets(); ?>
     <?php echo head_css(); ?>
     <?php echo head_js(); ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-
-<?php fire_plugin_hook('public_body', array('view' => $this)); ?>
+  <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
   <header role="banner">
-    <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+    <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 
     <h1 id="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
 
     <div id="primary-nav">
       <nav>
         <ul class="navigation">
-            <?php echo public_nav_main(); ?>
-            <?php //echo public_nav_main(array(__('Browse Exhibits') => uri('neatline-exhibits'))); ?>
+            <?php echo public_nav_main(array(__('Browse Exhibits') => url('neatline-exhibits'))); ?>
         </ul>
       </nav>
     </div>
@@ -51,4 +48,5 @@
 </figure>
 <?php endif; ?>
 
- <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+<?php fire_plugin_hook('page_content', array('view' => $this)); ?>
+
