@@ -9,27 +9,30 @@
  * - Google Fonts style sheet.
  * - Theme style sheet.
  */
-function queue_theme_assets() {
-  queue_js('modernizr.min');
+function queue_theme_assets()
+{
+
+  queue_js_file('modernizr.min');
 
   $respondSrc = src('respond.min.js', 'javascripts');
   $modernizrLoad = "Modernizr.load([{test: Modernizr.mq(), nope: " . "['$respondSrc']}]);";
   queue_js_string($modernizrLoad);
 
-  __v()->headScript()->appendFile(src('selectivizr.min.js', 'javascripts'), 'text/javascript', array('conditional' => 'lt IE 9'));
+  get_view()->headScript()->appendFile(src('selectivizr.min.js', 'javascripts'), 'text/javascript', array('conditional' => 'lt IE 9'));
+  get_view()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans|Bitter:400,700,400italic', 'screen');
 
-  __v()->headLink()->prependStylesheet('http://fonts.googleapis.com/css?family=Open+Sans|Bitter:400,700,400italic', 'screen');
-
-  queue_css('style');
+  queue_css_file('style');
 }
 
-function get_neatline_by_id($id) {
+function get_neatline_by_id($id)
+{
 
   return get_db()->getTable('NeatlineExhibit')->find($id);
 
 }
 
-function mcos_item_relations($item = null) {
+function mcos_item_relations($item = null)
+{
 
   $item = $item ? $item : get_current_item();
   $subjectRelations = ItemRelationsPlugin::prepareSubjectRelations($item);
