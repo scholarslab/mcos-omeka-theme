@@ -18,17 +18,15 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
-    <?php plugin_header(); ?>
+    <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
-    <?php queue_theme_assets(); ?>
-    <?php display_js(); ?>
-    <?php display_css(); ?>
-
+    <?php echo head_css(); ?>
+    <?php echo head_js(); ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 
-<?php plugin_body(); ?>
+<?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
   <header role="banner">
 
